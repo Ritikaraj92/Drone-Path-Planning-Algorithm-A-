@@ -62,22 +62,3 @@ def astar(grid, start, end):
                 heapq.heappush(open_list, neighbor_node)
 
     return None  # No path found
-
-# Example usage
-if __name__ == "__main__":
-    # 0: Free, 1: Obstacle
-    grid = [
-        [0, 1, 0, 0, 0],
-        [0, 1, 0, 1, 0],
-        [0, 0, 0, 1, 0],
-        [0, 1, 0, 0, 0],
-        [0, 0, 0, 1, 0],
-    ]
-    start = (0, 0)
-    end = (4, 4)
-
-    path = astar(grid, start, end)
-    if path:
-        print("Path found:", path)
-    else:
-        print("No path found.")
